@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro Arcade Fun Dashboard</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff3c00;
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.card {
+    width: 180px;
+    height: 80px;
+    background: #111;
+    border: 3px solid #00ffea;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffea, 0 0 20px #ff00ff, 0 0 30px #00ffff;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 0 20px #00ffea, 0 0 30px #ff00ff, 0 0 40px #00ffff;
+    background: #222;
+}
+</style>
+</head>
+<body>
+
+<h1>🎮 Retro Arcade Fun 🎮</h1>
+
+<div class="container">
+    <div class="card" onclick="openSite('https://neal.fun/infinite-craft/')">Infinite Craft</div>
+    <div class="card" onclick="openSite('https://pointerpointer.com/')">Pointer Pointer</div>
+    <div class="card" onclick="openSite('https://theuselessweb.com/')">The Useless Web</div>
+    <div class="card" onclick="openSite('https://www.window-swap.com/')">WindowSwap</div>
+    <div class="card" onclick="openSite('https://stars.chromeexperiments.com/')">100,000 Stars</div>
+    <div class="card" onclick="openSite('https://jspaint.app/')">JS Paint</div>
+    <div class="card" onclick="openSite('https://zoomquilt.org/')">Zoomquilt</div>
+    <div class="card" onclick="openSite('https://www.patatap.com/')">Patatap</div>
+</div>
+
+<script>
+function openSite(url){
+    window.open(url,'_blank');
+}
+</script>
+
+</body>
+</html>
